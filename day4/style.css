@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #cccccc;
+  --button-bg: #e0e0e0;
+  --button-text: #333333;
+  --container-bg: #f9f9f9;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --border-color: #444444;
+  --button-bg: #333333;
+  --button-text: #ffffff;
+  --container-bg: #2a2a2a;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--container-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.counter-group {
+  margin: 10px 0;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Character count indicator classes */
+.warning {
+  color: orange;
+}
+
+.over {
+  color: red;
+  font-weight: bold;
+}
