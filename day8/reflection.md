@@ -1,0 +1,7 @@
+# Reflection
+
+**The most difficult concept.** The hardest idea for me was thinking in numbers and under pressure: estimating reads, writes and storage, and then seeing how one spike changes the whole design. At first the numbers felt abstract. What helped was writing every calculation step by step and comparing a normal day with the peak. In TicketHub, seeing that the big sale is about 550 times busier than a normal day made it clear why a waiting room, a cache and a queue are needed, not just a bigger server. Double booking was the second hard idea. I overcame it by understanding that a check followed by an update can fail when two people act at the same moment, so the check and the change must be one atomic database step backed by a unique constraint.
+
+**What I would improve in my capstone.** In QuickNotes, I would make the architecture document stronger by describing what happens when a part fails, such as the cache or the primary database going down, and by explaining how users are kept safe. I would also write the trade-offs in more detail, with the reason I chose each option, and test the API client with more error cases such as slow or broken connections.
+
+**What I will learn next.** I want to learn databases in more depth, especially transactions, indexing and query performance. After that I want to study authentication and security, deploying a real service to the cloud, and load testing, so I can check that a design really works instead of only estimating.
